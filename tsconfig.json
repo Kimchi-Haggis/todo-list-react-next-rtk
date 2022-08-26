@@ -37,8 +37,11 @@
       "@layouts/*": [
         "./layouts/*"
       ],
+      "@redux/*": [
+        "./redux/*"
+      ],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tailwind.config.js", "components/common/toggleTheme/Toggle01.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "redux/slice/todosSlice.jsx"],
   "exclude": ["node_modules"]
 }
