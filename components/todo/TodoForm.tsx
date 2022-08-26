@@ -20,13 +20,17 @@ export const TodoForm = () => {
     );
   };
 
+  const handleChange =(e: React.ChangeEvent<HTMLInputElement>) => {
+    setTitle(e.target.value)
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
         name="todoName"
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={handleChange}
       />
       <button>Add Todo</button>
     </form>
