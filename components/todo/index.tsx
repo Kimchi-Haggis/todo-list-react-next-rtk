@@ -1,15 +1,23 @@
+import ContentsBox from '@components/common/box/ContentsBox';
+import ItemBox from '@components/common/box/ItemBox';
+import SectionBox from '@components/common/box/SectionBox';
 import React from 'react'
 import { TodoForm } from './TodoForm';
 import { TodoList } from './TodoList';
 
-type Props = {}
-
-const Todo = (props: Props) => {
+const Todo = () => {
   return (
-    <div>
-        <TodoForm />
+    <SectionBox className="bg-grain01 h-screen">
+      <ContentsBox>
+        <ItemBox boxType='box-item-head'>
+          <TodoForm />
+        </ItemBox>
+        <ItemBox boxType='box-item-head'>
         <TodoList />
-    </div>
+
+        </ItemBox>
+      </ContentsBox>
+    </SectionBox>
   )
 }
 
