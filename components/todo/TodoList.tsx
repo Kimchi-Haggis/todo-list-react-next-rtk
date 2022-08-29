@@ -10,17 +10,19 @@ export const TodoList = () => {
   const dispatch = useDispatch();
 
   const todos = useTypedSelector(selectTodos);
-
   return (
     <ul>
       {todos.map((todo) => (
-        <li key={todo.id}>
-          <input
-            type="checkbox"
-            checked={todo.completed}
-            onChange={() => dispatch(toggleTodo(todo.id))}
-          />
-          {todo.title}
+        <li key={todo.id} className='w-fit mx-60'>
+          <label>
+            <input
+              type="checkbox"
+              className="h-8 w-8 mr-10"
+              checked={todo.completed}
+              onChange={() => dispatch(toggleTodo(todo.id))}
+            />
+            <span>{todo.title}</span>
+          </label>
         </li>
       ))}
     </ul>
