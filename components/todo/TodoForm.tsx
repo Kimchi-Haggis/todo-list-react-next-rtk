@@ -25,7 +25,7 @@ export const TodoForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='w-fit mx-60'>
+    <form onSubmit={handleSubmit} className='w-fit mx-60 flex'>
       <input
         className='text-black h-20 border-2 border-black'
         type="text"
