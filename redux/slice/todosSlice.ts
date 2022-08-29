@@ -31,10 +31,8 @@ export const todosSlice = createSlice({
       state, 
       action: PayloadAction<TodoId>
     ) {
-      const index = state.list.findIndex(
-        ({ id }) => id === action.payload);
-      
-      if (index) {
+      const index = state.list.findIndex(({ id }) => id === action.payload);
+      if (index +1) {
         state.list[index].completed = !state.list[index].completed;
       }
     },
