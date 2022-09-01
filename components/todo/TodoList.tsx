@@ -15,7 +15,7 @@ export const TodoList = () => {
       {todos.map((todo) => (
         <li key={todo.id} className='mx-60 my-4 text-black dark:text-white h-full border-2 border-black dark:border-white'>
           <label className="flex px-4 h-full text-left">
-            <div className="w-10/12 ">{todo.title}</div>
+            <div className={"w-10/12" + (todo.completed? " line-through" : "")}>{todo.title}</div>
             <div className="w-2/12">
               <input
                 type="checkbox"
