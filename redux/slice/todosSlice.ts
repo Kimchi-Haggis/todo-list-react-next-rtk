@@ -31,9 +31,9 @@ export const todosSlice = createSlice({
       state,
       action: PayloadAction<TodoId>
     ) {
-      const itemId = action.payload;
-      state.list =  state.list.filter((todo) => todo.id !== itemId)
-      console.log("Item removed");
+      const todoId = action.payload;
+      state.list =  state.list.filter((todo) => todo.id !== todoId)
+      console.log("todo removed");
     },
     toggleTodo(
       state, 
@@ -44,10 +44,16 @@ export const todosSlice = createSlice({
         state.list[index].completed = !state.list[index].completed;
       }
     },
+    clearTodo(
+      state,
+    ) {
+      state.list = [];
+      console.log("clear");
+    }
   },
 });
 
-export const { addTodo, removeTodo, toggleTodo } = todosSlice.actions;
+export const { addTodo, removeTodo, toggleTodo, clearTodo } = todosSlice.actions;
 
 export default todosSlice.reducer;
 export const selectTodos = (state: RootState) => state.toDos.list;
