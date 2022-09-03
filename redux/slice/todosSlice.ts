@@ -48,7 +48,6 @@ export const todosSlice = createSlice({
       state,
     ) {
       state.list = [];
-      console.log("clear");
     }
   },
 });
