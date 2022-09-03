@@ -2,8 +2,8 @@ import clsx from 'clsx'
 import React from 'react'
 
 type SectionBoxProps = {
-    readonly children?: React.ReactNode;
-    readonly className: React.ReactNode;
+  readonly children?: React.ReactNode;
+  readonly className: React.ReactNode;
 }
 
 const SectionBox = (props: SectionBoxProps) => {
