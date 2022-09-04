@@ -15,14 +15,14 @@ export const TodoList = () => {
   };
 
   return (
-    <div className="text-4xl">
-      <div className="" onClick={handleClear}>Clear List</div>
+    <div>
+      <div className="text-3xl sm:text-4xl lg:text-5xl" onClick={handleClear}>Clear List</div>
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id} className='my-4 text-black dark:text-white h-full border-2 border-black dark:border-white'>
+          <li key={todo.id} className='text-lg sm:text-4xl my-4 w-full h-[40px] sm:h-[60px] text-black dark:text-white border-2 border-black dark:border-white'>
             <label className="flex px-4 h-full text-left">
-              <div className={"w-2/3" + (todo.completed? " line-through" : "")}>{todo.title}</div>
-              <div className="w-1/3 flex">
+              <div className={"w-3/4 overflow-ellipsis my-auto" + (todo.completed? " line-through" : "")}>{todo.title}</div>
+              <div className="w-1/4 flex justify-end">
                 <label className="my-auto">
                   <input
                     type="checkbox"

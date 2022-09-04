@@ -27,7 +27,7 @@ export const TodoForm = () => {
   return (
     <form onSubmit={handleSubmit} className='w-full flex'>
       <input
-        className='w-full xl:w-1/3 h-10 text-black sm:h-20 border-2 border-black'
+        className='text-3xl sm:text-4xl w-full md:text-5xl h-10 text-black sm:h-20 border-2 border-black'
         type="text"
         name="todoName"
         value={title}

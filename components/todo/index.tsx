@@ -10,10 +10,9 @@ const Todo = () => {
 
   return (
     <SectionBox className="bg-grain01 h-screen">
-      <ContentsBox className="w-full sm:w-2/3">
+      <ContentsBox className="w-ful md:w-10/12">
         <ItemBox boxType='box-item-head'>
           <TodoForm />
-
         </ItemBox>
         <ItemBox boxType='box-item-head'>
         <TodoList />
